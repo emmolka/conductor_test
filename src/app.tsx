@@ -1,9 +1,7 @@
-import React from "react";
+import TablePage from "./pages/table";
 
-const App = (): JSX.Element => (
-  <>
-    <div>LOOL</div>
-  </>
-);
+const App = (): JSX.Element => {
+  return <TablePage />;
+};
 
 export default App;

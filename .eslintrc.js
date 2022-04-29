@@ -10,7 +10,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "react", "react-hooks"],
   rules: {
     semi: [2, "always"],
     "object-curly-spacing": [2, "always"],
