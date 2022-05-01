@@ -14,6 +14,7 @@ export type Topic = {
 
 export interface TopicsTableProps {
   topics: Topic[];
+  topicsLoading: boolean;
 }
 
 export interface ModalComponentProps {

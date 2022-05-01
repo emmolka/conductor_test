@@ -11,7 +11,10 @@ import Paper from "@mui/material/Paper";
 import { TopicsTableProps, Topic } from "../../types";
 import ModalComponent from "../modal";
 
-const TopicsTable = ({ topics }: TopicsTableProps): JSX.Element => {
+const TopicsTable = ({
+  topics,
+  topicsLoading,
+}: TopicsTableProps): JSX.Element => {
   const [openedTopic, setOpenedTopic] = useState<Topic>();
 
   return (
@@ -22,7 +25,7 @@ const TopicsTable = ({ topics }: TopicsTableProps): JSX.Element => {
       <Table sx={{ minWidth: 650, maxWidth: 750 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Topic name</TableCell>
+            <TableCell>Topic</TableCell>
             <TableCell align="right">RF</TableCell>
             <TableCell align="right">Particion</TableCell>
             <TableCell align="right">Spread</TableCell>
@@ -40,7 +43,8 @@ const TopicsTable = ({ topics }: TopicsTableProps): JSX.Element => {
             loading={false}
             topicMessages={openedTopic?.messages || []}
           />
-          {!!topics.length &&
+          {!topicsLoading &&
+            !!topics.length &&
             topics.map((topic) => {
               const { name, id, spread, rf, particion } = topic;
               return (
@@ -64,7 +68,16 @@ const TopicsTable = ({ topics }: TopicsTableProps): JSX.Element => {
                 </TableRow>
               );
             })}
-          {!topics.length && "No topics yet"}
+          {!topicsLoading && !topics.length && (
+            <TableRow>
+              <TableCell>No topics yet</TableCell>
+            </TableRow>
+          )}
+          {topicsLoading && (
+            <TableRow>
+              <TableCell>Topics loading ...</TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </TableContainer>
