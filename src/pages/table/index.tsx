@@ -120,7 +120,7 @@ const TablePage = (): JSX.Element => {
   // };
 
   useEffect(() => {
-    // applyNewMessage("d2b50ab0-106e-436e-bae7-373e8f4726f0", "new test msg 123"); //If you would like to test it out on some messages :) just pick some correct id
+    // applyNewMessage("b27a759c-dbbd-4d4a-be6f-e5e10b763994", "new test msg 123"); //If you would like to test it out on some messages :) just pick some correct id
     const socket = io("ws://localhost:3001");
     socket.on("new topics", function (msg: Topic[]) {
       setTopics(msg);

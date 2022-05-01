@@ -25,3 +25,5 @@ export interface ModalComponentProps {
   topicTitle?: string;
   topicMessages: Message[];
 }
+
+export type Language = "en-US" | "pl-PL";

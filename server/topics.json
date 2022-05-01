@@ -1,1 +1,1 @@
-[{"id":"b27a759c-dbbd-4d4a-be6f-e5e10b763994","name":"Basic topic","rf":3,"spread":100,"particion":25,"messages":[]},{"id":"9fd54b43-50aa-460b-8dfb-7cf6e86bc181","name":"Another one","rf":3,"spread":100,"particion":25,"messages":[]}]
+[{"id":"b27a759c-dbbd-4d4a-be6f-e5e10b763994","name":"Basic topic","rf":3,"spread":100,"particion":25,"messages":[]},{"id":"9fd54b43-50aa-460b-8dfb-7cf6e86bc181","name":"Another one","rf":3,"spread":100,"particion":25,"messages":[]},{"id":"cace9465-e233-4d20-be3c-4f7ff04b652b","name":"Left","rf":3,"spread":100,"particion":25,"messages":[]}]

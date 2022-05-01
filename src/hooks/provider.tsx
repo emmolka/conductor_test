@@ -1,5 +1,6 @@
 /* eslint-disable indent */ // strange local eslint bug
 import React from "react";
+import { Language } from "../types";
 
 const langData = {
   "en-US": {
@@ -11,11 +12,11 @@ const langData = {
 };
 
 export const LangContext = React.createContext<{
-  lang: "en-US" | "pl-PL";
+  lang: Language;
   currentLangData: {
     [k: string]: string;
   };
-  switchLang: (language: "en-US" | "pl-PL") => void;
+  switchLang: (language: Language) => void;
 }>({
   lang: "en-US",
   currentLangData: langData["en-US"],
@@ -25,9 +26,9 @@ export const LangContext = React.createContext<{
 export function LangProvider(props: {
   children: React.ReactElement;
 }): JSX.Element {
-  const [lang, setLang] = React.useState<"en-US" | "pl-PL">("en-US");
+  const [lang, setLang] = React.useState<Language>("en-US");
 
-  const switchLang = (language: "en-US" | "pl-PL") => {
+  const switchLang = (language: Language) => {
     setLang(language);
   };
 
