@@ -183,7 +183,7 @@ const TablePage = (): JSX.Element => {
           >
             New topic
           </Button>
-          <Table topics={topics} topicsLoading={topicsLoading} />{" "}
+          <Table topics={topics} topicsLoading={topicsLoading} />
         </>
       ) : (
         <>
@@ -192,13 +192,7 @@ const TablePage = (): JSX.Element => {
             <MenuItem value={"en-US"}>EN</MenuItem>
           </Select>
           <Button onClick={() => loginWithRedirect()}>Login/sign up</Button>
-          <Typography
-            onClick={() => {
-              switchLang("pl-PL");
-            }}
-          >
-            {currentLangData?.welcome}
-          </Typography>
+          <Typography>{currentLangData?.welcome}</Typography>
         </>
       )}
     </TableContainer>
